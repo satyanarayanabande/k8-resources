@@ -1,0 +1,13 @@
+# docker run -p 80:80 nginx --> pull image from dockerfile and create container
+kind: pod 
+apiVersion: v1
+metadata:
+  name: nginx
+  namespace: roboshop
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    ports:
+      - containerPort: 80
+ 
