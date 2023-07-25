@@ -1,6 +1,6 @@
 # docker run -p 80:80 nginx --> pull image from dockerfile and create container
 kind: Pod
-apiVersion: v1
+apiVersion: v1 
 metadata:
   name: stress
 spec:
@@ -14,7 +14,7 @@ spec:
         #number of cores
         cpu: "0.2"
         #ram
-        memory: "120mi"
+        memory: "128mi"
       # hard level, if your containers cross the requests, limits are the minimun resources
       limits:
         cpu: "0.3"
