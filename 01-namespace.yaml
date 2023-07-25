@@ -1,4 +1,4 @@
-kind: namespace
+kind: Namespace
 apiversion: v1
 metadata:
   name: roboshop
