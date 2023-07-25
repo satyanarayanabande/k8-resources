@@ -8,3 +8,14 @@ spec:
   - image: satyanarayana5555/stress:v1
     name: nginx
     command: ["sleep","2000"]
+    resources:
+      # soft limit, when a container is created it will get these resources
+      requests:
+        #number of cores
+        cpu: "0.2"
+        #ram
+        memory: "120mi"
+      # hard level, if your containers cross the requests, limits are the minimun resources
+      limits:
+        cpu: "0.3"
+        memory: "156mi"
