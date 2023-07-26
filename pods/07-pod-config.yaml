@@ -17,7 +17,7 @@ spec:
   - image: nginx
     name: env-pod
     envFrom:
-    - configMapKeyRef:
+    - configMapRef:
         name: config-test
     #env: 
     #- name: CART_HOST
