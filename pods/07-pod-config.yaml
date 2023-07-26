@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: config-test
 data:
-  CART_HOST: cart
+  CART_HOST: cart1
   USER_HOST: user
   MYSQL_HOST: mysql.joindevops.com
   MYSQL_SCHEMA: cities
@@ -16,9 +16,12 @@ spec:
   containers:
   - image: nginx
     name: env-pod
-    env: 
-    - name: CART_HOST
-      valueFrom: 
-        configMapKeyRef:
-          name: config-test
-          key: CART_HOST
+    envFrom:
+    - configMapKeyRef:
+        name: config-test
+    #env: 
+    #- name: CART_HOST
+    #  valueFrom: 
+    #    configMapKeyRef:
+    #      name: config-test
+    #     key: CART_HOST
