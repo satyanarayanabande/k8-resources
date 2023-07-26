@@ -19,6 +19,6 @@ spec:
     env: 
     - name: CART_HOST
       valueFrom: 
-        configmapkeyRef:
+        configMapKeyRef:
           name: config-test
           key: CART_HOST
