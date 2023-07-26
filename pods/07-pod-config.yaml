@@ -8,7 +8,7 @@ data:
   MYSQL_HOST: mysql.joindevops.com
   MYSQL_SCHEMA: cities
 ---
-kind: pod
+kind: Pod
 apiVersion: v1
 metadata: 
   name: env-pod
