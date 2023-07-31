@@ -16,9 +16,9 @@ data:
           var.paths: ["/var/log/nginx/access.log*"]
         error:
           var.paths: ["/var/log/nginx/error.log*"]
-      output:
-        elasticsearch:
-          hosts: ["elasticsearch:9200"]
+    output:
+      elasticsearch:
+        hosts: ["elasticsearch:9200"]
 ---
 apiVersion: apps/v1
 kind: Deployment
